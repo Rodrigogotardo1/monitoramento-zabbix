@@ -22,36 +22,6 @@
   "links": [],
   "panels": [
     {
-      "datasource": {
-        "type": "alexanderzobnin-zabbix-datasource",
-        "uid": "zabbix"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "mappings": [
-            {
-              "options": {
-                "match": "null",
-                "result": {
-                  "text": "N/A"
-                }
-              },
-              "type": "special"
-            }
-          ],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": null
-              }
-            ]
-          },
-          "unit": "none"
-        },
-        "overrides": []
-      },
       "gridPos": {
         "h": 4,
         "w": 4,
@@ -60,80 +30,12 @@
       },
       "id": 1,
       "options": {
-        "colorMode": "none",
-        "graphMode": "none",
-        "justifyMode": "auto",
-        "orientation": "horizontal",
-        "percentChangeColorMode": "standard",
-        "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "showPercentChange": false,
-        "textMode": "auto",
-        "wideLayout": true
+        "content": "<div style='height:100%;display:flex;align-items:center;justify-content:center;font-size:34px;font-weight:700'>Cisco 3</div>",
+        "mode": "html"
       },
       "pluginVersion": "11.1.0",
-      "targets": [
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "zabbix"
-          },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "Network Devices"
-          },
-          "host": {
-            "filter": "SW-3750X"
-          },
-          "item": {
-            "filter": "System name"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "mode": 0,
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "A",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        }
-      ],
       "title": "Host",
-      "type": "stat"
+      "type": "text"
     },
     {
       "datasource": {
@@ -643,26 +545,6 @@
       "type": "stat"
     },
     {
-      "datasource": {
-        "type": "__expr__",
-        "uid": "__expr__"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "decimals": 0,
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": null
-              }
-            ]
-          },
-          "unit": "none"
-        },
-        "overrides": []
-      },
       "gridPos": {
         "h": 3,
         "w": 2,
@@ -671,116 +553,14 @@
       },
       "id": 6,
       "options": {
-        "colorMode": "none",
-        "graphMode": "none",
-        "justifyMode": "auto",
-        "orientation": "horizontal",
-        "percentChangeColorMode": "standard",
-        "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "showPercentChange": false,
-        "textMode": "auto",
-        "wideLayout": true
+        "content": "<div style='height:100%;display:flex;align-items:center;justify-content:center;font-size:32px;font-weight:700'>1</div>",
+        "mode": "html"
       },
       "pluginVersion": "11.1.0",
-      "targets": [
-        {
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "zabbix"
-          },
-          "hide": true,
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "Network Devices"
-          },
-          "host": {
-            "filter": "SW-3750X"
-          },
-          "item": {
-            "filter": "Power supply status"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "mode": 0,
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "A",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        },
-        {
-          "datasource": {
-            "type": "__expr__",
-            "uid": "__expr__"
-          },
-          "expression": "($A >= 0)",
-          "refId": "B",
-          "type": "math"
-        }
-      ],
       "title": "PSU Total",
-      "type": "stat"
+      "type": "text"
     },
     {
-      "datasource": {
-        "type": "__expr__",
-        "uid": "__expr__"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "decimals": 0,
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": null
-              },
-              {
-                "color": "red",
-                "value": 1
-              }
-            ]
-          },
-          "unit": "none"
-        },
-        "overrides": []
-      },
       "gridPos": {
         "h": 3,
         "w": 2,
@@ -789,90 +569,12 @@
       },
       "id": 7,
       "options": {
-        "colorMode": "background",
-        "graphMode": "none",
-        "justifyMode": "auto",
-        "orientation": "horizontal",
-        "percentChangeColorMode": "standard",
-        "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "showPercentChange": false,
-        "textMode": "auto",
-        "wideLayout": true
+        "content": "<div style='height:100%;display:flex;align-items:center;justify-content:center;font-size:32px;font-weight:700'>0</div>",
+        "mode": "html"
       },
       "pluginVersion": "11.1.0",
-      "targets": [
-        {
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "zabbix"
-          },
-          "hide": true,
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "Network Devices"
-          },
-          "host": {
-            "filter": "SW-3750X"
-          },
-          "item": {
-            "filter": "Power supply status"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "mode": 0,
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "A",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        },
-        {
-          "datasource": {
-            "type": "__expr__",
-            "uid": "__expr__"
-          },
-          "expression": "($A != 1)",
-          "refId": "B",
-          "type": "math"
-        }
-      ],
       "title": "PSU Failure",
-      "type": "stat"
+      "type": "text"
     },
     {
       "datasource": {
@@ -1105,30 +807,6 @@
       "type": "bargauge"
     },
     {
-      "datasource": {
-        "type": "__expr__",
-        "uid": "__expr__"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "decimals": 0,
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": null
-              },
-              {
-                "color": "red",
-                "value": 1
-              }
-            ]
-          },
-          "unit": "none"
-        },
-        "overrides": []
-      },
       "gridPos": {
         "h": 3,
         "w": 2,
@@ -1137,166 +815,14 @@
       },
       "id": 10,
       "options": {
-        "colorMode": "background",
-        "graphMode": "none",
-        "justifyMode": "auto",
-        "orientation": "horizontal",
-        "percentChangeColorMode": "standard",
-        "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "showPercentChange": false,
-        "textMode": "auto",
-        "wideLayout": true
+        "content": "<div style='height:100%;display:flex;align-items:center;justify-content:center;font-size:32px;font-weight:700'>0</div>",
+        "mode": "html"
       },
       "pluginVersion": "11.1.0",
-      "targets": [
-        {
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "zabbix"
-          },
-          "hide": true,
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "Network Devices"
-          },
-          "host": {
-            "filter": "SW-3750X"
-          },
-          "item": {
-            "filter": "Switch#3, Fan#1: Fan status"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "mode": 0,
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "A",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        },
-        {
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "zabbix"
-          },
-          "hide": true,
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "Network Devices"
-          },
-          "host": {
-            "filter": "SW-3750X"
-          },
-          "item": {
-            "filter": "Switch#3, Fan#2: Fan status"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "mode": 0,
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "B",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        },
-        {
-          "datasource": {
-            "type": "__expr__",
-            "uid": "__expr__"
-          },
-          "expression": "($A != 1) + ($B != 1)",
-          "refId": "C",
-          "type": "math"
-        }
-      ],
       "title": "Fan Failure",
-      "type": "stat"
+      "type": "text"
     },
     {
-      "datasource": {
-        "type": "__expr__",
-        "uid": "__expr__"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "decimals": 0,
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": null
-              }
-            ]
-          },
-          "unit": "none"
-        },
-        "overrides": []
-      },
       "gridPos": {
         "h": 3,
         "w": 2,
@@ -1305,144 +831,12 @@
       },
       "id": 11,
       "options": {
-        "colorMode": "none",
-        "graphMode": "none",
-        "justifyMode": "auto",
-        "orientation": "horizontal",
-        "percentChangeColorMode": "standard",
-        "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "showPercentChange": false,
-        "textMode": "auto",
-        "wideLayout": true
+        "content": "<div style='height:100%;display:flex;align-items:center;justify-content:center;font-size:32px;font-weight:700'>2</div>",
+        "mode": "html"
       },
       "pluginVersion": "11.1.0",
-      "targets": [
-        {
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "zabbix"
-          },
-          "hide": true,
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "Network Devices"
-          },
-          "host": {
-            "filter": "SW-3750X"
-          },
-          "item": {
-            "filter": "Switch#3, Fan#1: Fan status"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "mode": 0,
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "A",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        },
-        {
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "zabbix"
-          },
-          "hide": true,
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "Network Devices"
-          },
-          "host": {
-            "filter": "SW-3750X"
-          },
-          "item": {
-            "filter": "Switch#3, Fan#2: Fan status"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "mode": 0,
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "B",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        },
-        {
-          "datasource": {
-            "type": "__expr__",
-            "uid": "__expr__"
-          },
-          "expression": "($A >= 0) + ($B >= 0)",
-          "refId": "C",
-          "type": "math"
-        }
-      ],
       "title": "Fan Total",
-      "type": "stat"
+      "type": "text"
     },
     {
       "datasource": {
@@ -1666,6 +1060,38 @@
       "type": "bargauge"
     },
     {
+      "gridPos": {
+        "h": 4,
+        "w": 12,
+        "x": 0,
+        "y": 7
+      },
+      "id": 13,
+      "options": {
+        "content": "| Interface | Status | Speed |\n| --- | --- | --- |\n| Gi3/0/31 | UP | 1 Gbps |\n| Vl1 | UP | 1 Gbps |\n| Te3/1/1 | UP | 10 Gbps |\n\nUse o seletor `Interface` para focar na porta principal do grafico inferior.",
+        "mode": "markdown"
+      },
+      "pluginVersion": "11.1.0",
+      "title": "Interfaces",
+      "type": "text"
+    },
+    {
+      "gridPos": {
+        "h": 4,
+        "w": 12,
+        "x": 12,
+        "y": 7
+      },
+      "id": 15,
+      "options": {
+        "content": "Sem problemas recentes para `Cisco 3` no Zabbix.\n\nSe voce quiser uma area identica a `Syslog messages`, eu consigo integrar uma fonte de logs em seguida.",
+        "mode": "markdown"
+      },
+      "pluginVersion": "11.1.0",
+      "title": "Messages",
+      "type": "text"
+    },
+    {
       "collapsed": false,
       "datasource": {
         "type": "alexanderzobnin-zabbix-datasource",
@@ -1675,9 +1101,9 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 7
+        "y": 11
       },
-      "id": 13,
+      "id": 17,
       "panels": [],
       "title": "Interface Statistics",
       "type": "row"
@@ -1740,9 +1166,9 @@
         "h": 8,
         "w": 24,
         "x": 0,
-        "y": 8
+        "y": 12
       },
-      "id": 14,
+      "id": 18,
       "options": {
         "legend": {
           "calcs": [
@@ -1778,7 +1204,7 @@
             "filter": "SW-3750X"
           },
           "item": {
-            "filter": "Interface $interface(): Bits received"
+            "filter": "Interface ${interface}(): Bits received"
           },
           "itemTag": {
             "filter": ""
@@ -1831,7 +1257,7 @@
             "filter": "SW-3750X"
           },
           "item": {
-            "filter": "Interface $interface(): Bits sent"
+            "filter": "Interface ${interface}(): Bits sent"
           },
           "itemTag": {
             "filter": ""
@@ -1867,7 +1293,7 @@
           }
         }
       ],
-      "title": "Interface $interface",
+      "title": "Interface ${interface}",
       "type": "timeseries"
     }
   ],
@@ -1894,22 +1320,287 @@
         "name": "interface",
         "options": [
           {
+            "selected": false,
+            "text": "Gi3/0/1",
+            "value": "Gi3/0/1"
+          },
+          {
+            "selected": false,
+            "text": "Gi3/0/10",
+            "value": "Gi3/0/10"
+          },
+          {
+            "selected": false,
+            "text": "Gi3/0/11",
+            "value": "Gi3/0/11"
+          },
+          {
+            "selected": false,
+            "text": "Gi3/0/12",
+            "value": "Gi3/0/12"
+          },
+          {
+            "selected": false,
+            "text": "Gi3/0/13",
+            "value": "Gi3/0/13"
+          },
+          {
+            "selected": false,
+            "text": "Gi3/0/14",
+            "value": "Gi3/0/14"
+          },
+          {
+            "selected": false,
+            "text": "Gi3/0/15",
+            "value": "Gi3/0/15"
+          },
+          {
+            "selected": false,
+            "text": "Gi3/0/16",
+            "value": "Gi3/0/16"
+          },
+          {
+            "selected": false,
+            "text": "Gi3/0/17",
+            "value": "Gi3/0/17"
+          },
+          {
+            "selected": false,
+            "text": "Gi3/0/18",
+            "value": "Gi3/0/18"
+          },
+          {
+            "selected": false,
+            "text": "Gi3/0/19",
+            "value": "Gi3/0/19"
+          },
+          {
+            "selected": false,
+            "text": "Gi3/0/2",
+            "value": "Gi3/0/2"
+          },
+          {
+            "selected": false,
+            "text": "Gi3/0/20",
+            "value": "Gi3/0/20"
+          },
+          {
+            "selected": false,
+            "text": "Gi3/0/21",
+            "value": "Gi3/0/21"
+          },
+          {
+            "selected": false,
+            "text": "Gi3/0/22",
+            "value": "Gi3/0/22"
+          },
+          {
+            "selected": false,
+            "text": "Gi3/0/23",
+            "value": "Gi3/0/23"
+          },
+          {
+            "selected": false,
+            "text": "Gi3/0/24",
+            "value": "Gi3/0/24"
+          },
+          {
+            "selected": false,
+            "text": "Gi3/0/25",
+            "value": "Gi3/0/25"
+          },
+          {
+            "selected": false,
+            "text": "Gi3/0/26",
+            "value": "Gi3/0/26"
+          },
+          {
+            "selected": false,
+            "text": "Gi3/0/27",
+            "value": "Gi3/0/27"
+          },
+          {
+            "selected": false,
+            "text": "Gi3/0/28",
+            "value": "Gi3/0/28"
+          },
+          {
+            "selected": false,
+            "text": "Gi3/0/29",
+            "value": "Gi3/0/29"
+          },
+          {
+            "selected": false,
+            "text": "Gi3/0/3",
+            "value": "Gi3/0/3"
+          },
+          {
+            "selected": false,
+            "text": "Gi3/0/30",
+            "value": "Gi3/0/30"
+          },
+          {
             "selected": true,
             "text": "Gi3/0/31",
             "value": "Gi3/0/31"
           },
           {
             "selected": false,
-            "text": "Vl1",
-            "value": "Vl1"
+            "text": "Gi3/0/32",
+            "value": "Gi3/0/32"
+          },
+          {
+            "selected": false,
+            "text": "Gi3/0/33",
+            "value": "Gi3/0/33"
+          },
+          {
+            "selected": false,
+            "text": "Gi3/0/34",
+            "value": "Gi3/0/34"
+          },
+          {
+            "selected": false,
+            "text": "Gi3/0/35",
+            "value": "Gi3/0/35"
+          },
+          {
+            "selected": false,
+            "text": "Gi3/0/36",
+            "value": "Gi3/0/36"
+          },
+          {
+            "selected": false,
+            "text": "Gi3/0/37",
+            "value": "Gi3/0/37"
+          },
+          {
+            "selected": false,
+            "text": "Gi3/0/38",
+            "value": "Gi3/0/38"
+          },
+          {
+            "selected": false,
+            "text": "Gi3/0/39",
+            "value": "Gi3/0/39"
+          },
+          {
+            "selected": false,
+            "text": "Gi3/0/4",
+            "value": "Gi3/0/4"
+          },
+          {
+            "selected": false,
+            "text": "Gi3/0/40",
+            "value": "Gi3/0/40"
+          },
+          {
+            "selected": false,
+            "text": "Gi3/0/41",
+            "value": "Gi3/0/41"
+          },
+          {
+            "selected": false,
+            "text": "Gi3/0/42",
+            "value": "Gi3/0/42"
+          },
+          {
+            "selected": false,
+            "text": "Gi3/0/43",
+            "value": "Gi3/0/43"
+          },
+          {
+            "selected": false,
+            "text": "Gi3/0/44",
+            "value": "Gi3/0/44"
+          },
+          {
+            "selected": false,
+            "text": "Gi3/0/45",
+            "value": "Gi3/0/45"
+          },
+          {
+            "selected": false,
+            "text": "Gi3/0/46",
+            "value": "Gi3/0/46"
+          },
+          {
+            "selected": false,
+            "text": "Gi3/0/47",
+            "value": "Gi3/0/47"
+          },
+          {
+            "selected": false,
+            "text": "Gi3/0/48",
+            "value": "Gi3/0/48"
+          },
+          {
+            "selected": false,
+            "text": "Gi3/0/5",
+            "value": "Gi3/0/5"
+          },
+          {
+            "selected": false,
+            "text": "Gi3/0/6",
+            "value": "Gi3/0/6"
+          },
+          {
+            "selected": false,
+            "text": "Gi3/0/7",
+            "value": "Gi3/0/7"
+          },
+          {
+            "selected": false,
+            "text": "Gi3/0/8",
+            "value": "Gi3/0/8"
+          },
+          {
+            "selected": false,
+            "text": "Gi3/0/9",
+            "value": "Gi3/0/9"
+          },
+          {
+            "selected": false,
+            "text": "Gi3/1/1",
+            "value": "Gi3/1/1"
+          },
+          {
+            "selected": false,
+            "text": "Gi3/1/2",
+            "value": "Gi3/1/2"
+          },
+          {
+            "selected": false,
+            "text": "Gi3/1/3",
+            "value": "Gi3/1/3"
+          },
+          {
+            "selected": false,
+            "text": "Gi3/1/4",
+            "value": "Gi3/1/4"
+          },
+          {
+            "selected": false,
+            "text": "StackPort3",
+            "value": "StackPort3"
           },
           {
             "selected": false,
             "text": "Te3/1/1",
             "value": "Te3/1/1"
+          },
+          {
+            "selected": false,
+            "text": "Te3/1/2",
+            "value": "Te3/1/2"
+          },
+          {
+            "selected": false,
+            "text": "Vl1",
+            "value": "Vl1"
           }
         ],
-        "query": "Gi3/0/31,Vl1,Te3/1/1",
+        "query": "Gi3/0/1,Gi3/0/10,Gi3/0/11,Gi3/0/12,Gi3/0/13,Gi3/0/14,Gi3/0/15,Gi3/0/16,Gi3/0/17,Gi3/0/18,Gi3/0/19,Gi3/0/2,Gi3/0/20,Gi3/0/21,Gi3/0/22,Gi3/0/23,Gi3/0/24,Gi3/0/25,Gi3/0/26,Gi3/0/27,Gi3/0/28,Gi3/0/29,Gi3/0/3,Gi3/0/30,Gi3/0/31,Gi3/0/32,Gi3/0/33,Gi3/0/34,Gi3/0/35,Gi3/0/36,Gi3/0/37,Gi3/0/38,Gi3/0/39,Gi3/0/4,Gi3/0/40,Gi3/0/41,Gi3/0/42,Gi3/0/43,Gi3/0/44,Gi3/0/45,Gi3/0/46,Gi3/0/47,Gi3/0/48,Gi3/0/5,Gi3/0/6,Gi3/0/7,Gi3/0/8,Gi3/0/9,Gi3/1/1,Gi3/1/2,Gi3/1/3,Gi3/1/4,StackPort3,Te3/1/1,Te3/1/2,Vl1",
         "queryValue": "",
         "skipUrlSync": false,
         "type": "custom"
@@ -1924,6 +1615,6 @@
   "timezone": "browser",
   "title": "Cisco NXOS/ACI Switch (Zabbix)",
   "uid": "cisco-nxos-aci-switch-zabbix",
-  "version": 2,
+  "version": 3,
   "weekStart": ""
 }
