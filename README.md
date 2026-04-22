@@ -21,6 +21,7 @@ O ambiente sobe quatro servicos principais:
 - `zabbix-server`: coleta metricas, processa eventos e gera alertas
 - `zabbix-web`: interface web de administracao e visualizacao
 - `zabbix-agent`: agente local para validacao inicial do ambiente
+- `grafana`: camada de visualizacao integrada ao Zabbix
 
 Fluxo resumido:
 
@@ -85,6 +86,7 @@ Este projeto usa portas ajustadas para evitar conflito com outros ambientes loca
 - `8080`: interface web
 - `10061`: Zabbix Server publicado no host
 - `10060`: Zabbix Agent publicado no host
+- `3001`: Grafana
 
 As portas internas entre containers continuam sendo as padroes do Zabbix.
 
@@ -98,7 +100,10 @@ Principais variaveis no arquivo `.env`:
 - `ZABBIX_WEB_PORT`: porta web publicada
 - `ZABBIX_SERVER_PORT`: porta do Zabbix Server publicada no host
 - `ZABBIX_AGENT_PORT`: porta do Zabbix Agent publicada no host
+- `GRAFANA_PORT`: porta do Grafana publicada no host
 - `PHP_TZ`: timezone da interface web
+- `GRAFANA_ADMIN_USER`: usuario administrador do Grafana
+- `GRAFANA_ADMIN_PASSWORD`: senha do Grafana
 - `ZBX_AGENT_HOSTNAME`: nome do host do agente local
 - `ZBX_STARTPOLLERS`: quantidade inicial de pollers
 - `ZBX_STARTPINGERS`: quantidade inicial de pingers
@@ -130,6 +135,12 @@ Ver logs da interface web:
 
 ```powershell
 docker compose logs zabbix-web
+```
+
+Ver logs do Grafana:
+
+```powershell
+docker compose logs grafana
 ```
 
 Recriar os servicos apos alteracoes:
@@ -177,6 +188,26 @@ Validacoes executadas:
 - coleta SNMP no Zabbix com interface disponivel
 
 Se esse equipamento for reutilizado como padrao para outros switches Cisco, a mesma estrategia pode ser aplicada ajustando IP, usuario e credenciais SNMP.
+
+## Integracao com Grafana
+
+O projeto inclui Grafana no mesmo `docker-compose`, com plugin do Zabbix provisionado automaticamente.
+
+Acesso local:
+
+- Grafana: `http://localhost:3001`
+- Usuario padrao: `admin`
+- Senha local configurada: `Cstm830*`
+
+No arquivo `.env.example`, a senha do Grafana permanece como placeholder para evitar versionar a credencial ativa.
+
+Provisionamento aplicado:
+
+- plugin `alexanderzobnin-zabbix-app`
+- datasource `Zabbix`
+- conexao via API com `http://zabbix-web:8080/api_jsonrpc.php`
+
+Isso permite criar dashboards no Grafana usando hosts, itens e triggers ja existentes no Zabbix.
 
 ## Evolucao esperada do projeto
 
