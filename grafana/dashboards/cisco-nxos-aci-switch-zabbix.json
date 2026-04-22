@@ -1036,8 +1036,8 @@
   },
   "timepicker": {},
   "timezone": "browser",
-      "title": "SW-3750X Switchs 12476 Adapted",
-  "uid": "sw-3750x-grafana",
+      "title": "Cisco NXOS/ACI Switch (Zabbix)",
+  "uid": "cisco-nxos-aci-switch-zabbix",
   "version": 1,
   "weekStart": ""
 }

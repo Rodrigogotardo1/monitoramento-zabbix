@@ -9,9 +9,9 @@ datasources:
     isDefault: false
     editable: true
     jsonData:
-      username: Admin
+      username: ${ZABBIX_API_USER}
       trends: true
       timeout: 30
       disableDataAlignment: false
     secureJsonData:
-      password: zabbix
+      password: ${ZABBIX_API_PASSWORD}

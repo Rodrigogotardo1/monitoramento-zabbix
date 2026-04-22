@@ -197,15 +197,16 @@ Acesso local:
 
 - Grafana: `http://localhost:3001`
 - Usuario padrao: `admin`
-- Senha local configurada: `Cstm830*`
+- Senha definida no arquivo `.env` por `GRAFANA_ADMIN_PASSWORD`
 
-No arquivo `.env.example`, a senha do Grafana permanece como placeholder para evitar versionar a credencial ativa.
+No arquivo `.env.example`, as credenciais permanecem como placeholder para evitar versionar valores ativos.
 
 Provisionamento aplicado:
 
 - plugin `alexanderzobnin-zabbix-app`
 - datasource `Zabbix`
 - conexao via API com `http://zabbix-web:8080/api_jsonrpc.php`
+- credenciais da API lidas de `ZABBIX_API_USER` e `ZABBIX_API_PASSWORD`
 
 Isso permite criar dashboards no Grafana usando hosts, itens e triggers ja existentes no Zabbix.
 
