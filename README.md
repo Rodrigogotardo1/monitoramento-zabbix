@@ -156,6 +156,28 @@ Isso permite reiniciar os containers sem perder a base configurada.
 4. Adicionar um host de teste para ping ou agente.
 5. Iniciar o cadastro de dispositivos SNMP da rede.
 
+## Equipamento ja configurado
+
+O ambiente ja foi validado com um switch Cisco real na rede:
+
+- Host no Zabbix: `SW-3750X`
+- IP: `172.16.17.10`
+- Modelo detectado: `WS-C3750X-48PF-S`
+- Template aplicado: `Cisco IOS by SNMP`
+- Protocolo: `SNMPv3`
+- Security level: `authPriv`
+- Usuario SNMP: `admin`
+
+Validacoes executadas:
+
+- conectividade IP
+- acesso SSH ao equipamento
+- habilitacao de `SNMPv3`
+- resposta em `161/udp`
+- coleta SNMP no Zabbix com interface disponivel
+
+Se esse equipamento for reutilizado como padrao para outros switches Cisco, a mesma estrategia pode ser aplicada ajustando IP, usuario e credenciais SNMP.
+
 ## Evolucao esperada do projeto
 
 Proximos incrementos naturais para este repositorio:
