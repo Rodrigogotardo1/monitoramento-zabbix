@@ -53,8 +53,8 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 3,
-        "w": 6,
+        "h": 4,
+        "w": 4,
         "x": 0,
         "y": 0
       },
@@ -67,7 +67,7 @@
         "percentChangeColorMode": "standard",
         "reduceOptions": {
           "calcs": [
-            "mean"
+            "lastNotNull"
           ],
           "fields": "",
           "values": false
@@ -104,110 +104,6 @@
           "macro": {
             "filter": ""
           },
-          "mode": 2,
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "2",
-          "refId": "A",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        }
-      ],
-      "title": "Host name",
-      "type": "stat"
-    },
-    {
-      "datasource": {
-        "type": "alexanderzobnin-zabbix-datasource",
-        "uid": "zabbix"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "decimals": 0,
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": null
-              }
-            ]
-          },
-          "unit": "s"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 3,
-        "w": 6,
-        "x": 6,
-        "y": 0
-      },
-      "id": 2,
-      "options": {
-        "colorMode": "none",
-        "graphMode": "none",
-        "justifyMode": "auto",
-        "orientation": "horizontal",
-        "percentChangeColorMode": "standard",
-        "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "showPercentChange": false,
-        "textMode": "auto",
-        "wideLayout": true
-      },
-      "pluginVersion": "11.1.0",
-      "targets": [
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "zabbix"
-          },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "Network Devices"
-          },
-          "host": {
-            "filter": "SW-3750X"
-          },
-          "item": {
-            "filter": "Uptime (network)"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
           "mode": 0,
           "options": {
             "count": false,
@@ -236,7 +132,7 @@
           }
         }
       ],
-      "title": "Uptime",
+      "title": "Host",
       "type": "stat"
     },
     {
@@ -246,7 +142,8 @@
       },
       "fieldConfig": {
         "defaults": {
-          "decimals": 0,
+          "max": 100,
+          "min": 0,
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -255,12 +152,12 @@
                 "value": null
               },
               {
-                "color": "yellow",
-                "value": 70
+                "color": "orange",
+                "value": 60
               },
               {
                 "color": "red",
-                "value": 90
+                "value": 85
               }
             ]
           },
@@ -269,18 +166,14 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 3,
-        "w": 6,
-        "x": 12,
+        "h": 4,
+        "w": 4,
+        "x": 4,
         "y": 0
       },
-      "id": 3,
+      "id": 2,
       "options": {
-        "colorMode": "background",
-        "graphMode": "none",
-        "justifyMode": "auto",
-        "orientation": "horizontal",
-        "percentChangeColorMode": "standard",
+        "orientation": "auto",
         "reduceOptions": {
           "calcs": [
             "lastNotNull"
@@ -288,9 +181,9 @@
           "fields": "",
           "values": false
         },
-        "showPercentChange": false,
-        "textMode": "auto",
-        "wideLayout": true
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true,
+        "sizing": "auto"
       },
       "pluginVersion": "11.1.0",
       "targets": [
@@ -349,7 +242,7 @@
         }
       ],
       "title": "CPU 1min",
-      "type": "stat"
+      "type": "gauge"
     },
     {
       "datasource": {
@@ -358,7 +251,8 @@
       },
       "fieldConfig": {
         "defaults": {
-          "decimals": 2,
+          "max": 100,
+          "min": 0,
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -367,12 +261,12 @@
                 "value": null
               },
               {
-                "color": "yellow",
-                "value": 70
+                "color": "orange",
+                "value": 60
               },
               {
                 "color": "red",
-                "value": 90
+                "value": 85
               }
             ]
           },
@@ -381,18 +275,14 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 3,
-        "w": 6,
-        "x": 18,
+        "h": 4,
+        "w": 4,
+        "x": 8,
         "y": 0
       },
-      "id": 4,
+      "id": 3,
       "options": {
-        "colorMode": "background",
-        "graphMode": "none",
-        "justifyMode": "auto",
-        "orientation": "horizontal",
-        "percentChangeColorMode": "standard",
+        "orientation": "auto",
         "reduceOptions": {
           "calcs": [
             "lastNotNull"
@@ -400,9 +290,9 @@
           "fields": "",
           "values": false
         },
-        "showPercentChange": false,
-        "textMode": "auto",
-        "wideLayout": true
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true,
+        "sizing": "auto"
       },
       "pluginVersion": "11.1.0",
       "targets": [
@@ -460,8 +350,8 @@
           }
         }
       ],
-      "title": "Processor memory",
-      "type": "stat"
+      "title": "Memory Used",
+      "type": "gauge"
     },
     {
       "datasource": {
@@ -489,7 +379,7 @@
             },
             "lineInterpolation": "linear",
             "lineWidth": 2,
-            "pointSize": 4,
+            "pointSize": 3,
             "scaleDistribution": {
               "type": "linear"
             },
@@ -518,12 +408,12 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 8,
+        "h": 4,
         "w": 12,
-        "x": 0,
-        "y": 3
+        "x": 12,
+        "y": 0
       },
-      "id": 5,
+      "id": 4,
       "options": {
         "legend": {
           "calcs": [],
@@ -655,40 +545,7 @@
       },
       "fieldConfig": {
         "defaults": {
-          "color": {
-            "mode": "palette-classic"
-          },
-          "custom": {
-            "axisBorderShow": false,
-            "axisCenteredZero": false,
-            "axisColorMode": "text",
-            "axisLabel": "bps",
-            "axisPlacement": "auto",
-            "drawStyle": "line",
-            "fillOpacity": 10,
-            "gradientMode": "none",
-            "hideFrom": {
-              "legend": false,
-              "tooltip": false,
-              "viz": false
-            },
-            "lineInterpolation": "linear",
-            "lineWidth": 2,
-            "pointSize": 4,
-            "scaleDistribution": {
-              "type": "linear"
-            },
-            "showPoints": "never",
-            "spanNulls": true,
-            "stacking": {
-              "group": "A",
-              "mode": "none"
-            },
-            "thresholdsStyle": {
-              "mode": "off"
-            }
-          },
-          "mappings": [],
+          "decimals": 0,
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -698,28 +555,33 @@
               }
             ]
           },
-          "unit": "bps"
+          "unit": "s"
         },
         "overrides": []
       },
       "gridPos": {
-        "h": 8,
-        "w": 12,
-        "x": 12,
-        "y": 3
+        "h": 3,
+        "w": 4,
+        "x": 0,
+        "y": 4
       },
-      "id": 6,
+      "id": 5,
       "options": {
-        "legend": {
-          "calcs": [],
-          "displayMode": "list",
-          "placement": "bottom",
-          "showLegend": true
+        "colorMode": "none",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "horizontal",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
         },
-        "tooltip": {
-          "mode": "single",
-          "sort": "none"
-        }
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
       },
       "pluginVersion": "11.1.0",
       "targets": [
@@ -741,7 +603,924 @@
             "filter": "SW-3750X"
           },
           "item": {
-            "filter": "Interface Gi3/0/31(): Bits received"
+            "filter": "Uptime (network)"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "mode": 0,
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "title": "Uptime",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "__expr__",
+        "uid": "__expr__"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "decimals": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 2,
+        "x": 4,
+        "y": 4
+      },
+      "id": 6,
+      "options": {
+        "colorMode": "none",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "horizontal",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.1.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "zabbix"
+          },
+          "hide": true,
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "Network Devices"
+          },
+          "host": {
+            "filter": "SW-3750X"
+          },
+          "item": {
+            "filter": "Power supply status"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "mode": 0,
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "datasource": {
+            "type": "__expr__",
+            "uid": "__expr__"
+          },
+          "expression": "($A >= 0)",
+          "refId": "B",
+          "type": "math"
+        }
+      ],
+      "title": "PSU Total",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "__expr__",
+        "uid": "__expr__"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "decimals": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 1
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 2,
+        "x": 6,
+        "y": 4
+      },
+      "id": 7,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "horizontal",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.1.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "zabbix"
+          },
+          "hide": true,
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "Network Devices"
+          },
+          "host": {
+            "filter": "SW-3750X"
+          },
+          "item": {
+            "filter": "Power supply status"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "mode": 0,
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "datasource": {
+            "type": "__expr__",
+            "uid": "__expr__"
+          },
+          "expression": "($A != 1)",
+          "refId": "B",
+          "type": "math"
+        }
+      ],
+      "title": "PSU Failure",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "zabbix"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "max": 1,
+          "min": 0,
+          "mappings": [
+            {
+              "options": {
+                "1": {
+                  "text": "Online"
+                }
+              },
+              "type": "value"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "red",
+                "value": null
+              },
+              {
+                "color": "green",
+                "value": 1
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 4,
+        "x": 8,
+        "y": 4
+      },
+      "id": 8,
+      "options": {
+        "displayMode": "gradient",
+        "orientation": "horizontal",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showUnfilled": true,
+        "text": {}
+      },
+      "pluginVersion": "11.1.0",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "zabbix"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "Network Devices"
+          },
+          "host": {
+            "filter": "SW-3750X"
+          },
+          "item": {
+            "filter": "Power supply status"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "mode": 0,
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "title": "Power Supply Status",
+      "type": "bargauge"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "zabbix"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "max": 1,
+          "min": 0,
+          "mappings": [
+            {
+              "options": {
+                "1": {
+                  "text": "Online"
+                }
+              },
+              "type": "value"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "red",
+                "value": null
+              },
+              {
+                "color": "green",
+                "value": 1
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 4,
+        "x": 12,
+        "y": 4
+      },
+      "id": 9,
+      "options": {
+        "displayMode": "gradient",
+        "orientation": "horizontal",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showUnfilled": true,
+        "text": {}
+      },
+      "pluginVersion": "11.1.0",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "zabbix"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "Network Devices"
+          },
+          "host": {
+            "filter": "SW-3750X"
+          },
+          "item": {
+            "filter": "Fan status"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "mode": 0,
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "title": "Fan Status",
+      "type": "bargauge"
+    },
+    {
+      "datasource": {
+        "type": "__expr__",
+        "uid": "__expr__"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "decimals": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 1
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 2,
+        "x": 16,
+        "y": 4
+      },
+      "id": 10,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "horizontal",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.1.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "zabbix"
+          },
+          "hide": true,
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "Network Devices"
+          },
+          "host": {
+            "filter": "SW-3750X"
+          },
+          "item": {
+            "filter": "Switch#3, Fan#1: Fan status"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "mode": 0,
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "zabbix"
+          },
+          "hide": true,
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "Network Devices"
+          },
+          "host": {
+            "filter": "SW-3750X"
+          },
+          "item": {
+            "filter": "Switch#3, Fan#2: Fan status"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "mode": 0,
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "datasource": {
+            "type": "__expr__",
+            "uid": "__expr__"
+          },
+          "expression": "($A != 1) + ($B != 1)",
+          "refId": "C",
+          "type": "math"
+        }
+      ],
+      "title": "Fan Failure",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "__expr__",
+        "uid": "__expr__"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "decimals": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 2,
+        "x": 18,
+        "y": 4
+      },
+      "id": 11,
+      "options": {
+        "colorMode": "none",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "horizontal",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.1.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "zabbix"
+          },
+          "hide": true,
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "Network Devices"
+          },
+          "host": {
+            "filter": "SW-3750X"
+          },
+          "item": {
+            "filter": "Switch#3, Fan#1: Fan status"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "mode": 0,
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "zabbix"
+          },
+          "hide": true,
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "Network Devices"
+          },
+          "host": {
+            "filter": "SW-3750X"
+          },
+          "item": {
+            "filter": "Switch#3, Fan#2: Fan status"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "mode": 0,
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "datasource": {
+            "type": "__expr__",
+            "uid": "__expr__"
+          },
+          "expression": "($A >= 0) + ($B >= 0)",
+          "refId": "C",
+          "type": "math"
+        }
+      ],
+      "title": "Fan Total",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "zabbix"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "max": 1,
+          "min": 0,
+          "mappings": [
+            {
+              "options": {
+                "1": {
+                  "text": "UP"
+                }
+              },
+              "type": "value"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "red",
+                "value": null
+              },
+              {
+                "color": "green",
+                "value": 1
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 4,
+        "x": 20,
+        "y": 4
+      },
+      "id": 12,
+      "options": {
+        "displayMode": "gradient",
+        "orientation": "horizontal",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showUnfilled": true,
+        "text": {}
+      },
+      "pluginVersion": "11.1.0",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "zabbix"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "Network Devices"
+          },
+          "host": {
+            "filter": "SW-3750X"
+          },
+          "item": {
+            "filter": "Interface Gi3/0/31(): Operational status"
           },
           "itemTag": {
             "filter": ""
@@ -794,7 +1573,7 @@
             "filter": "SW-3750X"
           },
           "item": {
-            "filter": "Interface Gi3/0/31(): Bits sent"
+            "filter": "Interface Vl1(): Operational status"
           },
           "itemTag": {
             "filter": ""
@@ -828,10 +1607,80 @@
           "trigger": {
             "filter": ""
           }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "zabbix"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "Network Devices"
+          },
+          "host": {
+            "filter": "SW-3750X"
+          },
+          "item": {
+            "filter": "Interface Te3/1/1(): Operational status"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "mode": 0,
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "C",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
         }
       ],
-      "title": "Gi3/0/31 traffic",
-      "type": "timeseries"
+      "title": "Interface Status",
+      "type": "bargauge"
+    },
+    {
+      "collapsed": false,
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "zabbix"
+      },
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 7
+      },
+      "id": 13,
+      "panels": [],
+      "title": "Interface Statistics",
+      "type": "row"
     },
     {
       "datasource": {
@@ -859,7 +1708,7 @@
             },
             "lineInterpolation": "linear",
             "lineWidth": 2,
-            "pointSize": 4,
+            "pointSize": 3,
             "scaleDistribution": {
               "type": "linear"
             },
@@ -889,16 +1738,19 @@
       },
       "gridPos": {
         "h": 8,
-        "w": 12,
+        "w": 24,
         "x": 0,
-        "y": 11
+        "y": 8
       },
-      "id": 7,
+      "id": 14,
       "options": {
         "legend": {
-          "calcs": [],
-          "displayMode": "list",
-          "placement": "bottom",
+          "calcs": [
+            "lastNotNull",
+            "max"
+          ],
+          "displayMode": "table",
+          "placement": "right",
           "showLegend": true
         },
         "tooltip": {
@@ -926,7 +1778,7 @@
             "filter": "SW-3750X"
           },
           "item": {
-            "filter": "Interface Vl1(): Bits received"
+            "filter": "Interface $interface(): Bits received"
           },
           "itemTag": {
             "filter": ""
@@ -979,7 +1831,7 @@
             "filter": "SW-3750X"
           },
           "item": {
-            "filter": "Interface Vl1(): Bits sent"
+            "filter": "Interface $interface(): Bits sent"
           },
           "itemTag": {
             "filter": ""
@@ -1015,7 +1867,7 @@
           }
         }
       ],
-      "title": "Vl1 traffic",
+      "title": "Interface $interface",
       "type": "timeseries"
     }
   ],
@@ -1028,7 +1880,41 @@
     "cisco"
   ],
   "templating": {
-    "list": []
+    "list": [
+      {
+        "current": {
+          "selected": true,
+          "text": "Gi3/0/31",
+          "value": "Gi3/0/31"
+        },
+        "hide": 0,
+        "includeAll": false,
+        "label": "Interface",
+        "multi": false,
+        "name": "interface",
+        "options": [
+          {
+            "selected": true,
+            "text": "Gi3/0/31",
+            "value": "Gi3/0/31"
+          },
+          {
+            "selected": false,
+            "text": "Vl1",
+            "value": "Vl1"
+          },
+          {
+            "selected": false,
+            "text": "Te3/1/1",
+            "value": "Te3/1/1"
+          }
+        ],
+        "query": "Gi3/0/31,Vl1,Te3/1/1",
+        "queryValue": "",
+        "skipUrlSync": false,
+        "type": "custom"
+      }
+    ]
   },
   "time": {
     "from": "now-6h",
@@ -1036,8 +1922,8 @@
   },
   "timepicker": {},
   "timezone": "browser",
-      "title": "Cisco NXOS/ACI Switch (Zabbix)",
+  "title": "Cisco NXOS/ACI Switch (Zabbix)",
   "uid": "cisco-nxos-aci-switch-zabbix",
-  "version": 1,
+  "version": 2,
   "weekStart": ""
 }
