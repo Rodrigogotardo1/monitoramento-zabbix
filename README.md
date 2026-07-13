@@ -15,7 +15,7 @@ Esta base permite iniciar rapidamente um ambiente Zabbix para:
 
 ## Arquitetura
 
-O ambiente sobe quatro servicos principais:
+O ambiente sobe cinco servicos principais:
 
 - `postgres-server`: banco de dados do Zabbix
 - `zabbix-server`: coleta metricas, processa eventos e gera alertas
@@ -45,6 +45,8 @@ Hosts/Equipamentos -> Zabbix Server -> PostgreSQL
 - `.env`: configuracao ativa local, nao versionada
 - `.gitignore`: arquivos ignorados pelo Git
 - `README.md`: documentacao do projeto
+- `grafana/dashboards/`: dashboards provisionados automaticamente no Grafana
+- `grafana/provisioning/`: configuracao de datasources, dashboards, alerting e plugins do Grafana
 
 ## Como iniciar
 
@@ -156,6 +158,7 @@ O projeto usa volumes Docker para persistir:
 - dados do PostgreSQL
 - scripts e dados auxiliares do Zabbix Server
 - chaves SSH e MIBs do servidor
+- dashboards, configuracoes e sessoes do Grafana (`grafana_data`)
 
 Isso permite reiniciar os containers sem perder a base configurada.
 
@@ -210,6 +213,8 @@ Provisionamento aplicado:
 
 Isso permite criar dashboards no Grafana usando hosts, itens e triggers ja existentes no Zabbix.
 
+**Importante:** `ZABBIX_API_PASSWORD` precisa ser sempre igual a senha atual do usuario `Admin` no Zabbix. Se voce trocar a senha do `Admin` pela interface web (passo recomendado no primeiro uso), atualize tambem `ZABBIX_API_PASSWORD` no `.env` e recrie o container do Grafana (`docker compose up -d --force-recreate grafana`) — caso contrario o datasource Zabbix do Grafana para de autenticar.
+
 ## Evolucao esperada do projeto
 
 Proximos incrementos naturais para este repositorio:
@@ -230,10 +235,10 @@ Repositorio remoto:
 Comandos Git uteis:
 
 ```powershell
-& "C:\Program Files\Git\cmd\git.exe" status
-& "C:\Program Files\Git\cmd\git.exe" add .
-& "C:\Program Files\Git\cmd\git.exe" commit -m "mensagem"
-& "C:\Program Files\Git\cmd\git.exe" push
+git status
+git add .
+git commit -m "mensagem"
+git push
 ```
 
 ## Observacoes
